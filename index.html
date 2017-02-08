@@ -404,5 +404,43 @@
         </div>
       </div>
     </div>
+    <div class="popup_form">
+      <div class="popup_form_inner">
+        <div class="popup_form_close">X</div>
+        <div class="popup_form_title">Оставить  заявку</div>
+        <form action="handler.php" enctype="multipart/form-data" method="post">
+          <div class="form1">
+            <input type="hidden" name="Название формы" value="">
+            <div class="field">
+              <div class="field_title">Введите имя</div>
+              <div class="field_description"></div>
+              <div class="field_input">
+                <input type="text" required="required" name="Введите имя">
+              </div>
+            </div>
+            <div class="field">
+              <div class="field_title">Введите E-mail</div>
+              <div class="field_description"></div>
+              <div class="field_input">
+                <input type="text" required="required" name="Введите E-mail">
+              </div>
+            </div>
+            <div class="field">
+              <div class="field_title">Введите номер телефона</div>
+              <div class="field_description"></div>
+              <div class="field_input">
+                <input type="text" required="required" name="Введите номер телефона">
+              </div>
+            </div>
+            <div class="field">
+              <div class="field_input">
+                <input type="submit" data-action="thanks" data-url="" data-amount="0" value="Заказать" style=" ">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="popup_form_text">Мы не передаем Вашу персональную информацию третьим лицам.</div>
+      </div>
+    </div>
   </body>
 </html>
