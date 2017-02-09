@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/inputmask.min.js"></script>
   </head>
   <body>
     <div class="body-wrapper">
@@ -22,7 +22,7 @@
           <div class="logo_img"><img src="img/logo.png" alt=""></div>
           <div class="phone-and-btn">
             <div class="phone">8 800 333 22 33</div>
-            <div class="btn">Заказать звонок</div>
+            <div class="btn" data-role="open-request-form-btn">Заказать звонок</div>
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@
         <div class="container">
           <div class="title">Ремонт квартир и офисов&nbsp;под ключ от 1200 руб за м2.</div>
           <div class="sub_title">Акция: каждому заказавшему ремонт до 11 марта 2016 года&nbsp;клининговая уборка помещения с мытьем окон в подарок.</div>
-          <div class="btn">Заказать ремонт</div>
+          <div class="btn" data-role="open-request-form-btn">Заказать ремонт</div>
         </div>
       </div>
       <div class="why-we section">
@@ -104,7 +104,7 @@
                   <li>Визуализация помещений</li>
                 </ul>
               </div>
-              <div class="btn">БЕСПЛАТНЫЙ РАСЧЕТ</div>
+              <div class="btn" data-role="open-request-form-btn">БЕСПЛАТНЫЙ РАСЧЕТ</div>
             </div>
             <div class="col_3">
               <div class="image   border   shadow  "><img src="img/what-we-do2.jpg" alt=""></div>
@@ -128,7 +128,7 @@
                   <li>Гидроизоляция «мокрых зон»</li>
                 </ul>
               </div>
-              <div class="btn">БЕСПЛАТНЫЙ РАСЧЕТ</div>
+              <div class="btn" data-role="open-request-form-btn">БЕСПЛАТНЫЙ РАСЧЕТ</div>
             </div>
             <div class="col_3 last">
               <div class="image   border   shadow  "><img src="img/what-we-do3.jpg" alt=""></div>
@@ -153,7 +153,7 @@
                   <li>Уборка мусора финишная</li>
                 </ul>
               </div>
-              <div class="btn">БЕСПЛАТНЫЙ РАСЧЕТ</div>
+              <div class="btn" data-role="open-request-form-btn">БЕСПЛАТНЫЙ РАСЧЕТ</div>
             </div>
             <div class="clear"></div>
           </div>
@@ -170,21 +170,21 @@
                   <div class="title">Монтаж слаботочных систем</div>
                   <div class="txt">Описание услуги</div>
                   <div class="price">40 р/м2</div>
-                  <div class="btn surround">Заказать</div>
+                  <div class="btn surround" data-role="open-request-form-btn">Заказать</div>
                 </div>
                 <div class="col_3">
                   <div class="image border shadow"><img src="img/addition2.jpg" alt=""></div>
                   <div class="title">Многоуровневые потолки ГКЛ</div>
                   <div class="txt">Описание услуги</div>
                   <div class="price">900 р/м2</div>
-                  <div class="btn surround">Заказать</div>
+                  <div class="btn surround" data-role="open-request-form-btn">Заказать</div>
                 </div>
                 <div class="col_3 last">
                   <div class="image border shadow"><img src="img/addition3.jpg" alt=""></div>
                   <div class="title">Монтаж светодиодных лент</div>
                   <div class="txt">Описание услуги</div>
                   <div class="price">400 р/м2</div>
-                  <div class="btn surround">Заказать</div>
+                  <div class="btn surround" data-role="open-request-form-btn">Заказать</div>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -277,7 +277,7 @@
       <div class="request-form section">
         <div class="container">
           <div class="section-sub-title">Прямо сейчас закажите расчет стоимости вашего ремонта</div>
-            <div class="btn surround">Оставить заявку</div>
+            <div class="btn surround" data-role="open-request-form-btn">Оставить заявку</div>
             <div class="btn_descr">Наш специалист свяжется с вами для уточнения деталей</div>
           </div>
         </div>
@@ -404,37 +404,31 @@
         </div>
       </div>
     </div>
-    <div class="popup_form">
-      <div class="popup_form_inner">
-        <div class="popup_form_close">X</div>
+    <div class="popup_form_wrapper" data-role="request-form">
+      <div class="back" data-role="close-request-form-area"></div>
+      <div class="popup_form">
+        <div class="popup_form_close" data-role="close-request-form-btn">X</div>
         <div class="popup_form_title">Оставить  заявку</div>
-        <form action="handler.php" enctype="multipart/form-data" method="post">
+        <form method="POST" action="http://formspree.io/maxim.web.developer@gmail.com">
+          <input type="hidden" name="_subject" value="Заявка с master 73" />
           <div class="form1">
-            <input type="hidden" name="Название формы" value="">
             <div class="field">
               <div class="field_title">Введите имя</div>
               <div class="field_description"></div>
               <div class="field_input">
-                <input type="text" required="required" name="Введите имя">
-              </div>
-            </div>
-            <div class="field">
-              <div class="field_title">Введите E-mail</div>
-              <div class="field_description"></div>
-              <div class="field_input">
-                <input type="text" required="required" name="Введите E-mail">
+                <input type="text" required="required" name="Введите имя" />
               </div>
             </div>
             <div class="field">
               <div class="field_title">Введите номер телефона</div>
               <div class="field_description"></div>
               <div class="field_input">
-                <input type="text" required="required" name="Введите номер телефона">
+                <input type="tel" required="required" name="tel" placeholder="+7(___) ___ __-__" />
               </div>
             </div>
             <div class="field">
               <div class="field_input">
-                <input type="submit" data-action="thanks" data-url="" data-amount="0" value="Заказать" style=" ">
+                <input type="submit" value="Отправить">
               </div>
             </div>
           </div>
@@ -443,4 +437,5 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>
