@@ -404,7 +404,7 @@ html, body {
   font-weight: bold;
 }
 
-.contacts { background: #3D3D3D; color: #fff; }
+.contacts { position: relative; background: #3D3D3D; color: #fff; }
 .contacts .map {
   float: left;
   height: 300px;
@@ -420,6 +420,10 @@ html, body {
 .contacts .text {
   float: right;
   width: 300px;
+}
+
+.contacts .bottom {
+  padding-bottom: 50px;
 }
 
 
@@ -544,4 +548,10 @@ html, body {
   border: solid 2px;
   margin-bottom: 15px;
   color: #fff;
+}
+
+.w3c-valid {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
